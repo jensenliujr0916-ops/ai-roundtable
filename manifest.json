@@ -3,7 +3,6 @@
   "name": "AI 圆桌 - Multi-AI Roundtable",
   "version": "0.1.5",
   "description": "让多个 AI 助手围桌讨论，交叉评价，深度协作",
-
   "permissions": [
     "sidePanel",
     "activeTab",
@@ -11,23 +10,19 @@
     "scripting",
     "storage"
   ],
-
   "host_permissions": [
     "https://claude.ai/*",
     "https://chat.openai.com/*",
     "https://chatgpt.com/*",
     "https://gemini.google.com/*",
-        "https://www.perplexity.ai/*"
+    "https://www.perplexity.ai/*"
   ],
-
   "side_panel": {
     "default_path": "sidepanel/panel.html"
   },
-
   "background": {
     "service_worker": "background.js"
   },
-
   "content_scripts": [
     {
       "matches": ["https://claude.ai/*"],
@@ -44,20 +39,18 @@
       "js": ["content/gemini.js"],
       "run_at": "document_idle"
     },
-        {
+    {
       "matches": ["https://www.perplexity.ai/*"],
       "js": ["content/perplexity.js"],
       "run_at": "document_idle"
     }
   ],
-
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-
   "action": {
     "default_title": "打开 AI 圆桌"
   }
