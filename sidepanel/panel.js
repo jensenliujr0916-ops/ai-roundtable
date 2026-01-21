@@ -1,6 +1,6 @@
 // AI Panel - Side Panel Controller
 
-const AI_TYPES = ['claude', 'chatgpt', 'gemini, 'perplexity''];
+const AI_TYPES = ['claude', 'chatgpt', 'gemini', 'perplexity'];
 
 // Cross-reference action keywords (inserted into message)
 const CROSS_REF_ACTIONS = {
@@ -20,7 +20,7 @@ const logContainer = document.getElementById('log-container');
 const connectedTabs = {
   claude: null,
   chatgpt: null,
-  gemini: null
+  gemini: null,
     perplexity: null
 };
 
